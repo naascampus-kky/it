@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naas Campus | Computer & Digital Skills Course for Grade 6 - 9 Students in Kattankudy</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Empower your child with practical computer, graphic design, video editing, and AI skills at Naas Campus, Kattankudy. Designed for Grade 6-9 students. Live portfolio website project.">
+    <meta name="keywords" content="Naas Campus, Computer Course Kattankudy, Computer Course for Grade 6–9, Digital Skills Course Kattankudy, AI Course for Students, Computer Classes Kattankudy, Digital Skills for Students">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Naas Campus | Computer & Digital Skills Course for Grade 6 - 9">
+    <meta property="og:description" content="Practical computer, digital creativity, and AI skills for the next generation. Join Naas Campus in Kattankudy.">
+    <meta property="og:url" content="https://naascampus.lk">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                        neu: {
+                            base: '#F0F2F8',
+                            light: '#FFFFFF',
+                            dark: '#D1D9E6',
+                            text: '#2D3748',
+                            muted: '#718096'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neu-flat': '8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff',
+                        'neu-flat-sm': '4px 4px 10px #d1d9e6, -4px -4px 10px #ffffff',
+                        'neu-pressed': 'inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff',
+                        'neu-glow': '0 0 25px rgba(139, 92, 246, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for Soft Neumorphism & Glassmorphism -->
+    <style>
+        body {
+            background-color: #F0F2F8;
+            color: #2D3748;
+            overflow-x: hidden;
+        }
+
+        /* Soft Neumorphic Elements */
+        .neu-card {
+            background: #F0F2F8;
+            box-shadow: 10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff;
+            border-radius: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .neu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 14px 14px 28px #cbcfd9, -14px -14px 28px #ffffff;
+        }
+
+        .neu-btn {
+            background: #F0F2F8;
+            box-shadow: 5px 5px 12px #d1d9e6, -5px -5px 12px #ffffff;
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+        }
+
+        .neu-btn:hover {
+            box-shadow: 2px 2px 5px #d1d9e6, -2px -2px 5px #ffffff;
+            transform: translateY(1px);
+        }
+
+        .neu-btn-primary {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            box-shadow: 6px 6px 16px #d1d9e6, -6px -6px 16px #ffffff, inset 0px 1px 1px rgba(255, 255, 255, 0.4);
+            color: white;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+
+        .neu-btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed, #5b21b6);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .neu-input {
+            background: #F0F2F8;
+            box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .neu-input:focus {
+            box-shadow: inset 5px 5px 10px #c2c9d6, inset -5px -5px 10px #ffffff, 0 0 0 2px #8b5cf6;
+            outline: none;
+        }
+
+        /* Glassmorphism Elements */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F0F2F8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c4b5fd;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 7s ease-in-out 2s infinite;
+        }
+
+        /* Pulse Soft Gradient */
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-subtle {
+            animation: pulse-subtle 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-panel rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white font-display font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        N
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-lg leading-tight tracking-tight text-slate-800">NAAS CAMPUS</span>
+                        <span class="text-[10px] font-semibold text-brand-600 tracking-wider uppercase">Kattankudy</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-brand-600 transition-colors">Why Us</a>
+                    <a href="#modules" class="hover:text-brand-600 transition-colors">Course Modules</a>
+                    <a href="#ai-focus" class="hover:text-brand-600 transition-colors">AI & Tech</a>
+                    <a href="#portfolio" class="hover:text-brand-600 transition-colors">Final Project</a>
+                    <a href="#pricing" class="hover:text-brand-600 transition-colors">Pricing</a>
+                    <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Action Button & Mobile Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="#enquire" class="hidden sm:inline-flex neu-btn-primary px-6 py-2.5 text-xs font-bold uppercase tracking-wider items-center space-x-2">
+                        <span>Enquire Now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-600 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-3 neu-card p-6 rounded-2xl flex flex-col space-y-4 text-center font-medium text-slate-700 border border-white/80">
+                <a href="#home" class="py-2 border-b border-slate-200/50 hover:text-brand-600">Home</a>
+                <a href="#about" class="py-2 border-b border-slate-200/50 hover:text-brand-600">Why Us</a>
+                <a href="#modules" class="py-2 border-b border-slate-200/50 hover:text-brand-600">Course Modules</a>
+                <a href="#ai-focus" class="py-2 border-b border-slate-200/50 hover:text-brand-600">AI & Tech</a>
+                <a href="#portfolio" class="py-2 border-b border-slate-200/50 hover:text-brand-600">Final Project</a>
+                <a href="#pricing" class="py-2 border-b border-slate-200/50 hover:text-brand-600">Pricing</a>
+                <a href="#faq" class="py-2 border-b border-slate-200/50 hover:text-brand-600">FAQ</a>
+                <a href="#enquire" class="neu-btn-primary py-3 text-xs font-bold uppercase tracking-wider text-center mt-2">Enquire Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 01: HERO SECTION -->
+    <section id="home" class="relative pt-32 sm:pt-40 pb-20 lg:pb-32 px-4 sm:px-8 overflow-hidden">
+        <!-- Background Ambient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-300/30 rounded-full blur-3xl pointer-events-none animate-pulse-subtle"></div>
+        <div class="absolute top-1/3 right-10 w-72 h-72 bg-purple-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Content Column -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    
+                    <!-- Badges -->
+                    <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                        <span class="neu-card px-4 py-1.5 rounded-full text-xs font-bold text-brand-700 uppercase tracking-wider inline-flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                            Naas Campus
+                        </span>
+                        <span class="neu-card px-4 py-1.5 rounded-full text-xs font-bold text-slate-700 inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-graduation-cap text-brand-600"></i>
+                            Grade 6 – Grade 9 Students
+                        </span>
+                        <span class="neu-card px-4 py-1.5 rounded-full text-xs font-bold text-slate-700 inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-location-dot text-rose-500"></i>
+                            📍 Kattankudy
+                        </span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <div class="space-y-4">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                            Give Your Child a <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-purple-800">Strong Digital</span> Start.
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-600 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Computer skills, creativity and AI knowledge for the next generation. Designed for Grade 6–9 students in Kattankudy.
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#enquire" class="w-full sm:w-auto neu-btn-primary px-8 py-4 text-sm font-bold tracking-wider uppercase text-center flex items-center justify-center space-x-3">
+                            <span>Enquire Now</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </a>
+                        <a href="#modules" class="w-full sm:w-auto neu-card px-8 py-4 text-sm font-bold text-slate-700 hover:text-brand-600 tracking-wider uppercase text-center flex items-center justify-center space-x-2">
+                            <span>Explore Course</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Bar -->
+                    <div class="pt-6 border-t border-slate-200/60">
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Our Learning Methodology</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs font-bold text-slate-600">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-500"></i> Learn</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-500"></i> Practice</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-500"></i> Create</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-500"></i> Build</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-500"></i> Publish</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Hero Visual -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    
+                    <!-- Center Laptop / Canvas Visual -->
+                    <div class="w-full max-w-md neu-card p-6 rounded-3xl relative z-10 border border-white">
+                        
+                        <!-- Screen Header -->
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200/80 mb-4">
+                            <div class="flex space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-400 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+                            </div>
+                            <span class="text-[11px] font-mono font-semibold text-slate-400 bg-slate-200/50 px-2.5 py-0.5 rounded-full">naascampus.lk/student</span>
+                        </div>
+
+                        <!-- Inner Screen Grid Mockup -->
+                        <div class="space-y-3">
+                            <div class="p-4 rounded-2xl bg-gradient-to-r from-brand-600 to-purple-700 text-white shadow-lg">
+                                <div class="text-xs opacity-80 uppercase tracking-wider font-semibold">Course Module</div>
+                                <div class="text-base font-bold font-display mt-0.5">Computer & Digital Skills</div>
+                                <div class="mt-3 flex items-center justify-between text-xs">
+                                    <span class="bg-white/20 px-2 py-1 rounded-md backdrop-blur-sm">Grade 6 - 9</span>
+                                    <span class="font-semibold text-emerald-300"><i class="fa-solid fa-bolt mr-1"></i> Practical</span>
+                                </div>
+                            </div>
+
+                            <!-- Mock Modules Preview -->
+                            <div class="grid grid-cols-2 gap-2.5 text-xs font-semibold">
+                                <div class="p-3 neu-input rounded-xl flex items-center space-x-2 text-slate-700">
+                                    <i class="fa-brands fa-microsoft text-blue-500 text-base"></i>
+                                    <span>MS Office</span>
+                                </div>
+                                <div class="p-3 neu-input rounded-xl flex items-center space-x-2 text-slate-700">
+                                    <i class="fa-solid fa-palette text-pink-500 text-base"></i>
+                                    <span>Canva Design</span>
+                                </div>
+                                <div class="p-3 neu-input rounded-xl flex items-center space-x-2 text-slate-700">
+                                    <i class="fa-solid fa-video text-purple-500 text-base"></i>
+                                    <span>Video Editing</span>
+                                </div>
+                                <div class="p-3 neu-input rounded-xl flex items-center space-x-2 text-slate-700">
+                                    <i class="fa-solid fa-robot text-emerald-500 text-base"></i>
+                                    <span>AI & ChatGPT</span>
+                                </div>
+                            </div>
+
+                            <!-- Live Project Banner -->
+                            <div class="p-3 neu-card rounded-xl flex items-center justify-between text-xs bg-brand-50/50">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-globe text-brand-600"></i>
+                                    <span class="font-bold text-slate-800">Live Website Publishing</span>
+                                </div>
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Floating Neumorphic Skill Badges -->
+                    <div class="absolute -top-6 -left-4 neu-card px-4 py-2.5 rounded-2xl flex items-center space-x-2 text-xs font-bold text-slate-800 animate-float z-20">
+                        <div class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <span>Word & Excel</span>
+                    </div>
+
+                    <div class="absolute top-1/2 -right-6 neu-card px-4 py-2.5 rounded-2xl flex items-center space-x-2 text-xs font-bold text-slate-800 animate-float-delayed z-20">
+                        <div class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center text-brand-600">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <span>Prompt Engineering</span>
+                    </div>
+
+                    <div class="absolute -bottom-6 left-6 neu-card px-4 py-2.5 rounded-2xl flex items-center space-x-2 text-xs font-bold text-slate-800 animate-float z-20">
+                        <div class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span>Portfolio Website</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: THE REAL QUESTION -->
+    <section id="about" class="py-20 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="neu-card p-8 sm:p-12 rounded-3xl border border-white">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left Split -->
+                    <div class="lg:col-span-5 space-y-4 text-center lg:text-left">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Future Readiness</span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 leading-tight">
+                            Is Your Child Ready for the Digital World?
+                        </h2>
+                        <p class="text-slate-600 font-medium leading-relaxed">
+                            Today, knowing how to use a computer is only the beginning. Technology is changing fast. Helping children build the right digital foundation early can give them a stronger start for the future.
+                        </p>
+                    </div>
+
+                    <!-- Right Split - Cards Grid -->
+                    <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        
+                        <div class="neu-input p-5 rounded-2xl text-center space-y-2">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-purple-100 flex items-center justify-center text-brand-600 text-lg">
+                                <i class="fa-solid fa-desktop"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-slate-800">Computer Skills</h3>
+                        </div>
+
+                        <div class="neu-input p-5 rounded-2xl text-center space-y-2">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-pink-100 flex items-center justify-center text-pink-600 text-lg">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-slate-800">Digital Creativity</h3>
+                        </div>
+
+                        <div class="neu-input p-5 rounded-2xl text-center space-y-2">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 text-lg">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-slate-800">AI Skills</h3>
+                        </div>
+
+                        <div class="neu-input p-5 rounded-2xl text-center space-y-2">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-lg">
+                                <i class="fa-solid fa-puzzle-piece"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-slate-800">Problem Solving</h3>
+                        </div>
+
+                        <div class="neu-input p-5 rounded-2xl text-center space-y-2">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 text-lg">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-slate-800">Communication</h3>
+                        </div>
+
+                        <div class="neu-input p-5 rounded-2xl text-center space-y-2">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-slate-800">Future Skills</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: COURSE INTRODUCTION -->
+    <section class="py-16 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto text-center space-y-12">
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Educational Approach</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    More Than Just a Computer Course.
+                </h2>
+                <p class="text-slate-600 font-medium leading-relaxed">
+                    This course is designed to help Grade 6–9 students learn practical computer, digital and AI skills through hands-on learning, creative projects and real-world activities.
+                </p>
+            </div>
+
+            <!-- 3 Neumorphic Action Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="neu-card p-8 text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-brand-600 to-brand-400 text-white flex items-center justify-center text-2xl font-display font-bold shadow-md">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">LEARN</h3>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                        Master essential digital concepts, software operations, safety, and modern AI fundamentals step-by-step.
+                    </p>
+                </div>
+
+                <div class="neu-card p-8 text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-brand-600 to-brand-400 text-white flex items-center justify-center text-2xl font-display font-bold shadow-md">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">PRACTICE</h3>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                        Apply lessons through guided exercises, document formatting, spreadsheets, graphics, and video editing.
+                    </p>
+                </div>
+
+                <div class="neu-card p-8 text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-brand-600 to-brand-400 text-white flex items-center justify-center text-2xl font-display font-bold shadow-md">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">CREATE</h3>
+                    <p class="text-sm text-slate-600 font-medium leading-relaxed">
+                        Transform knowledge into real output including posters, presentations, short videos, and live websites.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Animated Journey Line Indicator -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 font-display font-bold text-sm tracking-wider text-slate-700">
+                <span class="px-5 py-2 neu-input rounded-xl">BUILD</span>
+                <i class="fa-solid fa-arrow-down sm:fa-arrow-right text-brand-600"></i>
+                <span class="px-5 py-2 neu-card text-brand-600 rounded-xl border border-brand-200">PUBLISH LIVE</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 04: WHAT STUDENTS WILL LEARN (12 MODULES) -->
+    <section id="modules" class="py-20 px-4 sm:px-8 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Comprehensive Curriculum</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    What Will Your Child Learn?
+                </h2>
+                <p class="text-slate-600 font-medium">
+                    12 carefully structured modules bridging fundamental computing to modern AI technology.
+                </p>
+            </div>
+
+            <!-- Interactive Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Module 01 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">01</span>
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Computer Basics</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Understand computers and learn to use them confidently.</p>
+                </div>
+
+                <!-- Module 02 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">02</span>
+                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Windows & Computer Skills</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Files, folders, settings, shortcuts and everyday computer operations.</p>
+                </div>
+
+                <!-- Module 03 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">03</span>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Internet & Digital Skills</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Search, browse, upload, download, email and digital organization.</p>
+                </div>
+
+                <!-- Module 04 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">04</span>
+                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Microsoft Word</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Create professional documents, reports and student projects.</p>
+                </div>
+
+                <!-- Module 05 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">05</span>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Microsoft Excel</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Learn data entry, formulas, calculations and charts.</p>
+                </div>
+
+                <!-- Module 06 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">06</span>
+                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-powerpoint"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Microsoft PowerPoint</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Create engaging presentations and present ideas confidently.</p>
+                </div>
+
+                <!-- Module 07 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">07</span>
+                        <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Canva & Graphic Design</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Create posters, social media designs, presentations and creative content.</p>
+                </div>
+
+                <!-- Module 08 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">08</span>
+                        <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Video Editing</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Learn basic editing, storytelling, text, music and transitions.</p>
+                </div>
+
+                <!-- Module 09 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">09</span>
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Artificial Intelligence</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Understand AI and learn how modern AI tools can support learning and creativity.</p>
+                </div>
+
+                <!-- Module 10 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">10</span>
+                        <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">AI Tools</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Explore tools such as ChatGPT, Gemini, Claude and other AI categories.</p>
+                </div>
+
+                <!-- Module 11 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-slate-400">11</span>
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-800">Prompt Engineering</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Learn how to communicate effectively with AI using better prompts.</p>
+                </div>
+
+                <!-- Module 12 -->
+                <div class="neu-card p-6 space-y-3 group hover:border-brand-300 bg-brand-50/30">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-brand-600">12</span>
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-slate-900">Website Development</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Build and publish a personal portfolio website.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 05: AI FOCUS SECTION -->
+    <section id="ai-focus" class="py-20 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="neu-card p-8 sm:p-12 rounded-3xl border border-white relative overflow-hidden">
+                
+                <!-- Purple Decorative Glow -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-300/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="space-y-12 relative z-10">
+                    
+                    <div class="text-center max-w-3xl mx-auto space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Next-Gen Education</span>
+                        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-slate-900">
+                            AI Is Changing the World.<br>Let's Learn to Use It.
+                        </h2>
+                        <p class="text-slate-600 font-medium leading-relaxed">
+                            Students don't just learn what AI is. They learn how to choose the right tool, write better prompts, check information and use AI responsibly.
+                        </p>
+                    </div>
+
+                    <!-- AI Tools Icons Bar -->
+                    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
+                        <div class="neu-card px-6 py-3 rounded-2xl flex items-center space-x-3 text-sm font-bold text-slate-800">
+                            <i class="fa-solid fa-bolt text-emerald-500"></i>
+                            <span>CHATGPT</span>
+                        </div>
+                        <div class="neu-card px-6 py-3 rounded-2xl flex items-center space-x-3 text-sm font-bold text-slate-800">
+                            <i class="fa-solid fa-sparkles text-blue-500"></i>
+                            <span>GEMINI</span>
+                        </div>
+                        <div class="neu-card px-6 py-3 rounded-2xl flex items-center space-x-3 text-sm font-bold text-slate-800">
+                            <i class="fa-solid fa-brain text-amber-600"></i>
+                            <span>CLAUDE</span>
+                        </div>
+                    </div>
+
+                    <!-- AI Categories Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="neu-input p-4 rounded-xl text-center font-bold text-xs text-slate-700">AI for Learning</div>
+                        <div class="neu-input p-4 rounded-xl text-center font-bold text-xs text-slate-700">AI for Creativity</div>
+                        <div class="neu-input p-4 rounded-xl text-center font-bold text-xs text-slate-700">AI for Research</div>
+                        <div class="neu-input p-4 rounded-xl text-center font-bold text-xs text-slate-700">AI for Writing</div>
+                        <div class="neu-input p-4 rounded-xl text-center font-bold text-xs text-slate-700">AI for Design</div>
+                        <div class="neu-input p-4 rounded-xl text-center font-bold text-xs text-slate-700">AI for Projects</div>
+                    </div>
+
+                    <!-- Animated Process Workflow -->
+                    <div class="pt-6 border-t border-slate-200/80">
+                        <div class="text-center mb-6 text-xs font-bold uppercase tracking-widest text-slate-400">Responsible AI Process</div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            
+                            <div class="p-4 neu-card rounded-2xl space-y-1">
+                                <div class="text-xs font-mono font-bold text-brand-600">STEP 1</div>
+                                <div class="font-display font-bold text-slate-800">ASK</div>
+                            </div>
+
+                            <div class="p-4 neu-card rounded-2xl space-y-1">
+                                <div class="text-xs font-mono font-bold text-brand-600">STEP 2</div>
+                                <div class="font-display font-bold text-slate-800">CHECK</div>
+                            </div>
+
+                            <div class="p-4 neu-card rounded-2xl space-y-1">
+                                <div class="text-xs font-mono font-bold text-brand-600">STEP 3</div>
+                                <div class="font-display font-bold text-slate-800">IMPROVE</div>
+                            </div>
+
+                            <div class="p-4 neu-card rounded-2xl space-y-1 bg-brand-50/50">
+                                <div class="text-xs font-mono font-bold text-emerald-600">STEP 4</div>
+                                <div class="font-display font-bold text-brand-700">CREATE</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 06: PRACTICAL LEARNING -->
+    <section class="py-20 px-4 sm:px-8 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Hands-on Focus</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    Not Just Theory. Real Practice.
+                </h2>
+                <p class="text-slate-600 font-medium">
+                    Every major skill is supported by practical tasks, assignments and creative projects.
+                </p>
+            </div>
+
+            <!-- Process Timeline Bar -->
+            <div class="neu-card p-6 rounded-2xl">
+                <div class="flex flex-wrap items-center justify-between gap-4 text-center text-xs font-bold font-display text-slate-700">
+                    <span>LEARN</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400 hidden sm:inline"></i>
+                    <span>WATCH</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400 hidden sm:inline"></i>
+                    <span>PRACTICE</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400 hidden sm:inline"></i>
+                    <span>ASSIGNMENT</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400 hidden sm:inline"></i>
+                    <span>CREATE</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400 hidden sm:inline"></i>
+                    <span class="text-brand-600">IMPROVE</span>
+                </div>
+            </div>
+
+            <!-- 4 Pillar Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="neu-card p-6 space-y-3">
+                    <div class="text-3xl text-brand-600"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="font-display font-bold text-slate-800">Practical Tasks</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Real keyboard, file management, and software operation practice during classes.</p>
+                </div>
+
+                <div class="neu-card p-6 space-y-3">
+                    <div class="text-3xl text-pink-500"><i class="fa-solid fa-icons"></i></div>
+                    <h3 class="font-display font-bold text-slate-800">Creative Projects</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Designing posters, school presentations, and basic video storytelling.</p>
+                </div>
+
+                <div class="neu-card p-6 space-y-3">
+                    <div class="text-3xl text-indigo-500"><i class="fa-solid fa-robot"></i></div>
+                    <h3 class="font-display font-bold text-slate-800">AI Activities</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Interactive prompt sessions, homework assistance, and research checking.</p>
+                </div>
+
+                <div class="neu-card p-6 space-y-3">
+                    <div class="text-3xl text-emerald-500"><i class="fa-solid fa-globe"></i></div>
+                    <h3 class="font-display font-bold text-slate-800">Digital Projects</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Building web pages, publishing live content, and personal portfolio showcases.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 07: EXPERIENCED TEACHING TEAM -->
+    <section class="py-20 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Instruction & Mentorship</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    Guided by Experience. Built for the Future.
+                </h2>
+            </div>
+
+            <!-- Two Profile Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Senior Faculty -->
+                <div class="neu-card p-8 rounded-3xl space-y-4 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full bg-slate-200/80 neu-input flex items-center justify-center text-slate-400 text-3xl">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-purple-100 text-brand-700 font-bold text-xs uppercase tracking-wider mb-2">Senior Guidance</span>
+                        <h3 class="text-xl font-display font-bold text-slate-800">20+ Years Teaching Experience</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                        Students are guided by experienced teachers with more than 20 years of teaching experience, ensuring structured pedagogy, patience, and clear understanding.
+                    </p>
+                </div>
+
+                <!-- Industry Professionals -->
+                <div class="neu-card p-8 rounded-3xl space-y-4 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full bg-slate-200/80 neu-input flex items-center justify-center text-slate-400 text-3xl">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider mb-2">Modern Technology</span>
+                        <h3 class="text-xl font-display font-bold text-slate-800">Practical Digital Experience</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                        Young professionals with practical experience in the digital field help students connect learning with real-world digital skills, AI tools, and web publishing.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 08: FINAL PROJECT (HIGHLIGHT SECTION) -->
+    <section id="portfolio" class="py-20 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="neu-card p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-brand-900 to-purple-950 text-white relative overflow-hidden border-none shadow-2xl">
+                
+                <!-- Background Ambient Lights -->
+                <div class="absolute top-0 right-0 w-80 h-80 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    
+                    <!-- Text Side -->
+                    <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                        <span class="px-3 py-1 rounded-full bg-white/10 text-brand-200 text-xs font-bold uppercase tracking-widest inline-block border border-white/10">Capstone Project</span>
+                        
+                        <h2 class="text-3xl sm:text-5xl font-display font-extrabold leading-tight">
+                            From Student to Digital Creator.
+                        </h2>
+
+                        <p class="text-slate-300 text-sm sm:text-base font-medium leading-relaxed">
+                            At the end of the learning journey, every student builds their own <span class="text-white font-bold underline decoration-brand-400">Personal Portfolio Website</span> and publishes it live on the Internet.
+                        </p>
+
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-xs sm:text-sm text-brand-200 font-semibold">
+                            "Learners don't just finish with notes. They finish with something they can show to parents, teachers, and friends."
+                        </div>
+
+                        <!-- Process badges -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2 text-xs font-bold">
+                            <span class="px-3 py-1.5 rounded-lg bg-white/10">LEARN</span>
+                            <span>→</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-white/10">BUILD</span>
+                            <span>→</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">PUBLISH</span>
+                            <span>→</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-white/10">SHARE</span>
+                        </div>
+                    </div>
+
+                    <!-- Laptop Showcase Visual -->
+                    <div class="lg:col-span-6">
+                        <div class="glass-panel p-6 rounded-2xl text-slate-800 bg-white/90 shadow-2xl relative">
+                            
+                            <!-- Mock Browser Bar -->
+                            <div class="flex items-center space-x-2 pb-4 mb-4 border-b border-slate-200">
+                                <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                <span class="text-[10px] font-mono text-slate-400 ml-2">https://student-name.naascampus.site</span>
+                            </div>
+
+                            <!-- Mock Portfolio Structure -->
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold">JS</div>
+                                    <div>
+                                        <div class="font-bold text-sm">Student Portfolio</div>
+                                        <div class="text-[10px] text-slate-500">Grade 8 Student • Kattankudy</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-600">ABOUT ME</span>
+                                    <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-600">MY SKILLS</span>
+                                    <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-600">MY PROJECTS</span>
+                                    <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-600">MY DESIGNS</span>
+                                    <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-slate-600">MY AI PROJECTS</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 text-center pt-2">
+                                    <div class="p-2 bg-purple-50 rounded-lg text-[10px] font-bold text-brand-700">
+                                        <i class="fa-solid fa-image mb-1 block text-sm"></i>
+                                        Canva Posters
+                                    </div>
+                                    <div class="p-2 bg-blue-50 rounded-lg text-[10px] font-bold text-blue-700">
+                                        <i class="fa-solid fa-file-lines mb-1 block text-sm"></i>
+                                        Word Reports
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 09: STUDENT PROJECTS SHOWCASE -->
+    <section class="py-20 px-4 sm:px-8 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Real Deliverables</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    What Will Students Create?
+                </h2>
+                <p class="text-slate-600 font-medium">
+                    Every student completes tangible outputs throughout the course modules.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-id-card text-brand-600 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">Student Profile</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-file-image text-pink-500 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">School Event Poster</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-table text-emerald-600 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">Class Result Sheet</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-circle-play text-orange-500 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">Dream Presentation</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-paintbrush text-teal-500 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">Creative Poster</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-film text-rose-500 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">Short Video</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-robot text-purple-600 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">AI Learning Project</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-bullhorn text-indigo-500 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">AI Campaign</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2">
+                    <i class="fa-solid fa-magnifying-glass text-amber-500 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-800">Research Project</h3>
+                </div>
+
+                <div class="neu-card p-4 text-center space-y-2 bg-brand-50/50">
+                    <i class="fa-solid fa-globe text-brand-600 text-xl"></i>
+                    <h3 class="text-xs font-bold text-slate-900">Portfolio Website</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 10: CONTINUOUS LEARNING & JOURNEY -->
+    <section class="py-20 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Modular Learning Pathway</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    Learning That Moves With Every Student.
+                </h2>
+                <p class="text-slate-600 font-medium leading-relaxed">
+                    Students progress through modules step-by-step as they learn. The journey is designed to keep learning moving forward consistently without confusing terminology.
+                </p>
+            </div>
+
+            <!-- Visual Progression Tracker -->
+            <div class="neu-card p-8 rounded-3xl">
+                <div class="text-center font-display font-bold text-lg text-slate-800 mb-6">
+                    One Journey. Many Digital Skills.
+                </div>
+                
+                <div class="flex flex-wrap items-center justify-center gap-3 text-xs font-bold">
+                    <span class="px-4 py-2 neu-input rounded-xl text-slate-700">Computer Fundamentals</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
+                    <span class="px-4 py-2 neu-input rounded-xl text-slate-700">Digital Skills</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
+                    <span class="px-4 py-2 neu-input rounded-xl text-slate-700">Microsoft Office</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
+                    <span class="px-4 py-2 neu-input rounded-xl text-slate-700">Graphic Design</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
+                    <span class="px-4 py-2 neu-input rounded-xl text-slate-700">Video Editing</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
+                    <span class="px-4 py-2 neu-input rounded-xl text-slate-700">Artificial Intelligence</span>
+                    <i class="fa-solid fa-chevron-right text-brand-400"></i>
+                    <span class="px-4 py-2 neu-card rounded-xl text-brand-700 border border-brand-300">Live Website Publishing</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 12: PRICING -->
+    <section id="pricing" class="py-20 px-4 sm:px-8 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Affordable Quality</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    Start Your Child's Digital Journey
+                </h2>
+                <p class="text-slate-600 font-medium">
+                    Transparent, value-packed pricing with flexible payment options for parents.
+                </p>
+            </div>
+
+            <!-- Neumorphic Pricing Card -->
+            <div class="max-w-lg mx-auto neu-card p-8 sm:p-10 rounded-3xl border border-white text-center space-y-6 relative">
+                
+                <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-brand-600 to-purple-600 text-white text-xs font-bold tracking-wider uppercase shadow-md">
+                    Special Discount Offer
+                </span>
+
+                <div class="space-y-2 pt-2">
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Original Course Fee</div>
+                    <div class="text-xl font-bold text-slate-400 line-through">Rs. 24,999/-</div>
+                </div>
+
+                <div class="p-6 neu-input rounded-2xl space-y-2">
+                    <div class="text-xs font-bold text-brand-600 uppercase tracking-widest">Special Discounted Fee</div>
+                    <div class="text-4xl sm:text-5xl font-display font-extrabold text-slate-900">
+                        Rs. 15,000<span class="text-lg text-slate-500 font-normal">/-</span>
+                    </div>
+                    <div class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
+                        Save Rs. 9,999/-
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-left text-sm font-semibold text-slate-700 border-t border-b border-slate-200/80 py-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-check text-emerald-500"></i>
+                        <span>Complete Course Materials & Guidance</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-check text-emerald-500"></i>
+                        <span>Monthly Payment Option Available</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-check text-emerald-500"></i>
+                        <span>Live Personal Portfolio Website Hosted</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-check text-emerald-500"></i>
+                        <span>Certificate & Awards Included</span>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <a href="#enquire" class="w-full neu-btn-primary py-4 text-xs font-bold uppercase tracking-wider block text-center">
+                        Enquire Now
+                    </a>
+                    <p class="text-[11px] text-slate-500 font-medium">Contact Naas Campus for enrollment details and payment plans.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 13 & 14: WHY NAAS CAMPUS & CERTIFICATES -->
+    <section class="py-20 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto space-y-20">
+            
+            <!-- Why Naas Campus -->
+            <div class="space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">The Advantage</span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                        Why Learn With Naas Campus?
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="neu-card p-6 text-center space-y-2">
+                        <i class="fa-solid fa-laptop-code text-brand-600 text-2xl"></i>
+                        <h3 class="font-bold text-sm text-slate-800">Practical Learning</h3>
+                    </div>
+                    <div class="neu-card p-6 text-center space-y-2">
+                        <i class="fa-solid fa-chalkboard-user text-brand-600 text-2xl"></i>
+                        <h3 class="font-bold text-sm text-slate-800">Experienced Teaching</h3>
+                    </div>
+                    <div class="neu-card p-6 text-center space-y-2">
+                        <i class="fa-solid fa-robot text-brand-600 text-2xl"></i>
+                        <h3 class="font-bold text-sm text-slate-800">Digital & AI Skills</h3>
+                    </div>
+                    <div class="neu-card p-6 text-center space-y-2">
+                        <i class="fa-solid fa-wand-magic-sparkles text-brand-600 text-2xl"></i>
+                        <h3 class="font-bold text-sm text-slate-800">Creative Projects</h3>
+                    </div>
+                    <div class="neu-card p-6 text-center space-y-2">
+                        <i class="fa-solid fa-globe text-brand-600 text-2xl"></i>
+                        <h3 class="font-bold text-sm text-slate-800">Real Portfolio Website</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate & Awards -->
+            <div class="neu-card p-8 sm:p-12 rounded-3xl border border-white space-y-8">
+                <div class="text-center max-w-2xl mx-auto space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Recognition</span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                        Learn. Complete. Celebrate.
+                    </h2>
+                    <p class="text-slate-600 font-medium">
+                        Students who successfully complete the learning journey will receive a Certificate. Special recognition and awards will also be presented to outstanding students.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Best Digital Creator</span>
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Best AI Explorer</span>
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Best Graphic Designer</span>
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Best Video Creator</span>
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Best Portfolio Website</span>
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Most Improved Student</span>
+                    <span class="neu-input px-4 py-2 rounded-xl text-xs font-bold text-slate-700">🏆 Creative Thinker</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 15: PARENT MESSAGE -->
+    <section class="py-16 px-4 sm:px-8 bg-brand-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+            <span class="px-4 py-1.5 rounded-full bg-white/10 text-brand-200 text-xs font-bold uppercase tracking-widest inline-block">A Message to Parents</span>
+            <h2 class="text-3xl sm:text-5xl font-display font-extrabold leading-tight">
+                Give Them Skills They Can Carry Into the Future.
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl mx-auto">
+                Your child is growing up in a digital world. Give them the opportunity to understand technology, create with it and use it responsibly.
+            </p>
+            <div class="pt-4">
+                <a href="#enquire" class="inline-flex neu-btn-primary px-8 py-4 text-xs font-bold uppercase tracking-widest items-center space-x-2">
+                    <span>Start the Digital Journey</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 16: FAQ ACCORDION -->
+    <section id="faq" class="py-20 px-4 sm:px-8 bg-slate-100/50">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Questions & Answers</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>1. Who is this course for?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        This course is specifically designed for Grade 6–9 school students looking to build early digital confidence, creative skills, and practical AI knowledge.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>2. Is this only a Computer Basics course?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        No. It covers computer skills, Microsoft Office (Word, Excel, PowerPoint), Canva graphic design, video editing, Internet skills, Artificial Intelligence, and live website development.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>3. Is the course practical?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        Yes. Students learn through practical tasks, real software usage, class assignments, and creative projects rather than purely theoretical lectures.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>4. Will students learn AI?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        Yes. Students are introduced to AI concepts, popular tools (ChatGPT, Gemini, Claude), prompt engineering, research, fact-checking, and responsible AI practices.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>5. Will students build a website?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        Yes. The capstone project is a personal portfolio website that students build and publish live online to showcase their work.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>6. Is monthly payment available?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        Yes. Monthly payment plans are available. Contact Naas Campus directly for payment structure details.
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="neu-card rounded-2xl p-6 transition-all">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left font-display font-bold text-slate-800 text-base focus:outline-none">
+                        <span>7. Where is Naas Campus located?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-200/60 text-sm text-slate-600 leading-relaxed font-medium">
+                        Naas Campus is located at Telecom Road, Kattankudy, Sri Lanka.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 17 & LEAD FORM: CONTACT & ENQUIRY -->
+    <section id="enquire" class="py-20 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Info Panel -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">
+                            Ready to Start?
+                        </h2>
+                        <p class="text-slate-600 font-medium leading-relaxed">
+                            Give your child a stronger start in the digital world. Contact Naas Campus today or submit the enquiry form.
+                        </p>
+                    </div>
+
+                    <!-- Contact Details Cards -->
+                    <div class="space-y-4">
+                        <a href="tel:0757473786" class="neu-card p-5 rounded-2xl flex items-center space-x-4 group block">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-bold uppercase">Call Us Directly</div>
+                                <div class="text-lg font-bold text-slate-800">075 74 73 786</div>
+                            </div>
+                        </a>
+
+                        <a href="mailto:naaskky@gmail.com" class="neu-card p-5 rounded-2xl flex items-center space-x-4 group block">
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-bold uppercase">Email Us</div>
+                                <div class="text-base font-bold text-slate-800">naaskky@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <div class="neu-card p-5 rounded-2xl flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-500 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-bold uppercase">Campus Address</div>
+                                <div class="text-base font-bold text-slate-800">Telecom Road, Kattankudy</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Direct Action Buttons -->
+                    <div class="flex flex-wrap gap-3">
+                        <a href="tel:0757473786" class="neu-card px-6 py-3 rounded-full text-xs font-bold text-slate-800 flex items-center space-x-2">
+                            <i class="fa-solid fa-phone text-brand-600"></i>
+                            <span>Call Now</span>
+                        </a>
+                        <a href="https://wa.me/94757473786?text=Hello%20Naas%20Campus,%20I%20would%20like%20to%20enquire%20about%20the%20Computer%20%26%20Digital%20Skills%20Course." target="_blank" rel="noopener noreferrer" class="neu-card px-6 py-3 rounded-full text-xs font-bold text-emerald-700 flex items-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+                            <span>WhatsApp Us</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="lg:col-span-7">
+                    <div class="neu-card p-8 sm:p-10 rounded-3xl border border-white space-y-6">
+                        <div class="space-y-1">
+                            <h3 class="text-2xl font-display font-bold text-slate-900">Enquiry Form</h3>
+                            <p class="text-xs text-slate-500 font-medium">Fill out the form below and our team will get back to you promptly.</p>
+                        </div>
+
+                        <form id="enquiry-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for your enquiry. Naas Campus will contact you soon!');">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Student Name</label>
+                                    <input type="text" required placeholder="Enter student's name" class="w-full neu-input p-3.5 rounded-xl text-sm text-slate-800 font-medium">
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Student Grade</label>
+                                    <select required class="w-full neu-input p-3.5 rounded-xl text-sm text-slate-800 font-medium">
+                                        <option value="">Select Grade</option>
+                                        <option value="Grade 6">Grade 6</option>
+                                        <option value="Grade 7">Grade 7</option>
+                                        <option value="Grade 8">Grade 8</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Parent Name</label>
+                                    <input type="text" required placeholder="Enter parent's name" class="w-full neu-input p-3.5 rounded-xl text-sm text-slate-800 font-medium">
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Phone / WhatsApp</label>
+                                    <input type="tel" required placeholder="e.g. 0757473786" class="w-full neu-input p-3.5 rounded-xl text-sm text-slate-800 font-medium">
+                                </div>
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Message (Optional)</label>
+                                <textarea rows="3" placeholder="Any specific questions or details..." class="w-full neu-input p-3.5 rounded-xl text-sm text-slate-800 font-medium"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full neu-btn-primary py-4 text-xs font-bold uppercase tracking-widest text-center">
+                                Submit Enquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-4 sm:px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+            
+            <!-- Brand Info -->
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white font-display font-bold text-xl">
+                        N
+                    </div>
+                    <span class="font-display font-bold text-xl text-white">NAAS CAMPUS</span>
+                </div>
+                <p class="text-xs leading-relaxed max-w-sm text-slate-400">
+                    Premium educational technology institution empowering Grade 6–9 students with practical computing, digital creativity, and Artificial Intelligence skills.
+                </p>
+                <div class="text-xs font-semibold text-slate-300">
+                    📍 Telecom Road, Kattankudy, Sri Lanka
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-xs font-medium">
+                    <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="#modules" class="hover:text-white transition-colors">Course Modules</a></li>
+                    <li><a href="#ai-focus" class="hover:text-white transition-colors">AI & Tech</a></li>
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Capstone Projects</a></li>
+                    <li><a href="#pricing" class="hover:text-white transition-colors">Pricing & Discount</a></li>
+                    <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Summary -->
+            <div class="md:col-span-4 space-y-3">
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact Naas Campus</h4>
+                <div class="text-xs space-y-2 text-slate-300">
+                    <p><i class="fa-solid fa-phone text-brand-400 mr-2"></i> 075 74 73 786</p>
+                    <p><i class="fa-solid fa-envelope text-brand-400 mr-2"></i> naaskky@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot text-brand-400 mr-2"></i> Kattankudy, Sri Lanka</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-slate-800/80 text-center text-xs text-slate-500 font-medium">
+            © Naas Campus. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM CTA -->
+    <div class="sm:hidden fixed bottom-4 left-4 right-4 z-40">
+        <a href="https://wa.me/94757473786?text=Hello%20Naas%20Campus,%20I%20would%20like%20to%20enquire%20about%20the%20Computer%20%26%20Digital%20Skills%20Course." target="_blank" rel="noopener noreferrer" class="w-full neu-btn-primary py-3.5 px-6 rounded-full flex items-center justify-center space-x-3 text-xs font-bold uppercase tracking-widest shadow-2xl">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Enquire via WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY & ANIMATIONS -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu on Link Click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle visibility
+                answer.classList.toggle('hidden');
+
+                // Rotate Icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Navbar Scroll Shadow effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
